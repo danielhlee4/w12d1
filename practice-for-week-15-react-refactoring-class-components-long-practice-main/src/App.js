@@ -59,7 +59,7 @@ function App() {
     <div className="widgets">
       <Folder folders={folders} />
       <Weather />
-      <ClockToggle clockToggle={clickHandler} />
+      <ClockToggle toggleClock={clickHandler} />
       {showClock && <Clock />}
       <Autocomplete names={names} />
     </div>

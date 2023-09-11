@@ -6,7 +6,7 @@ export class ClockToggle extends React.Component {
       <button 
         type="button"
         className="clock-toggle" 
-        onClick={this.props.clockToggle}
+        onClick={this.props.toggleClock}
       >
         Toggle Clock
       </button>
