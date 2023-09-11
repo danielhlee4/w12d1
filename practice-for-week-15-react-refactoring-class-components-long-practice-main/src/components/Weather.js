@@ -85,13 +85,13 @@ function Weather() {
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {
-    navigator.geolocation?.getCurrentPosition(
-      pollWeather,
-      (err) => console.log(err),
-      { timeout: 10000 }
-    );
+    // navigator.geolocation?.getCurrentPosition(
+    //   pollWeather,
+    //   (err) => console.log(err),
+    //   { timeout: 10000 }
+    // );
 
-    pollWeather = async (location) => {
+    const pollWeather = async (location) => {
       let url = 'http://api.openweathermap.org/data/2.5/weather?';
 
       /* Remember that it's unsafe to expose your API key. (Note that pushing
@@ -122,6 +122,12 @@ function Weather() {
         alert ("Check Weather API key!")
       }
     }
+
+    navigator.geolocation?.getCurrentPosition(
+      pollWeather,
+      (err) => console.log(err),
+      { timeout: 10000 }
+    );
 
   }, [])
 
